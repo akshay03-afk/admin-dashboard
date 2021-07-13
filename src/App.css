@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    height: 100vh;
+    position: relative;
+}
+.sidebarMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 50px;
+    height: 100vh;
+    position: absolute;
+    top: -20px;
+    box-shadow: 5px 0 5px -2px rgba(0,0,0,0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebarMenu .logo{
+    height: 70px;
+    width: 70px;
+    padding-bottom: 10px;
+    color: purple;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebarMenu .row{
+    justify-content: center;
+    list-style-type: none;
+    color: purple;
+    text-align: center;
+    padding: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebarMenu .icon{
+    font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebarMenu .title{
+    font-size: 12px;
+}
+
+
+.sidebarMenu #active{
+    height: 50px;
+    width: 50px;
+    border: 1px solid purple;
+    border-radius: 5px;
+}
+
+.rightSidebarMenu{
+    z-index: 111111;
+    width: 50px;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    right: 0;
+    top: -20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 5px 3px rgba(0,0,0,0.2);
+}
+
+.rightSidebarMenu .icons{
+    list-style: none;
+    padding: 5px;
+    font-size: 20px;
+    color: grey;
+}
+
+.rightSidebarMenu .icons:hover{
+    color: purple;
+}
+
+.container{
+    position: absolute;
+    left: 90px;
+    right: 120px;
+    margin-top: 10px;
+}
+
+.container .box{
+    position: absolute;
+    height: 90vh;
+    width: 87%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.box .header{
+    font-weight: 300;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+
+.list-header{
+    list-style: none;
+    line-height: 3;
+    width: 400px;   
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin-left: 10px; 
+}
+
+
+.box .list-header .active:hover{
+    margin-left: 0;
+    border-left: 5px solid purple;
+    background: #e8cce2;
+    width: 200px;
+}
+
+.container-modal{
+    position: absolute;
+    left: 90px;
+    right: 120px;
+    margin-top: 10px;
+}
+
+.container-modal .box{
+    position: absolute;
+    height: 90vh;
+    width: 87%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.container-modal .header{
+    position: relative;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-modal .header .left{
+    color: purple;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.container-modal .header .right{
+    margin-top: 60px;
+    padding: 10px;
+    margin-left: 300px;
+}
+
+.container-modal .right .header-icon{
+    color: purple;
+    position: absolute;
+    top: 68px;
+
+}
+
+.container-modal .divider {
+    width: 820px;
+    margin-left: 50px;
+}
+
+.forms{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 100px;
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+    padding: 0;
+    line-height: 0.2;   
+}
+
+.forms .buttons{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    color: purple;
+}
+
+.forms .text h3{
+    font-weight: 500;
 }
